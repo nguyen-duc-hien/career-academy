@@ -792,12 +792,12 @@ select:focus {
   gap: 10px;
   padding: 12px 16px;
   border-radius: 8px;
-  background-color: var(--primary);
+  background-color: var(--secondary);
   color: var(--primary-50);
   cursor: pointer;
 }
 .button:hover {
-  background: var(--secondary);
+  background: var(--primary);
   color: var(--primary-50);
 }
 .button:disabled, .button[disabled] {
@@ -1609,4 +1609,119 @@ hr.footer-divider {
   .action-col.active .action-content {
     max-height: 519px;
   }
+}
+
+.why-choose {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.why-choose:hover p {
+  color: var(--secondary);
+}
+.why-choose:hover .img {
+  filter: brightness(0) invert(45%) sepia(90%) saturate(1500%) hue-rotate(205deg);
+}
+
+.you-learn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  padding: 56px 34px;
+  border-radius: 16px;
+  background: var(--white);
+  box-shadow: 0px 4px 25px 0px rgba(0, 61, 184, 0.1);
+  border: 1px solid;
+  border-color: transparent;
+}
+.you-learn:hover {
+  border-color: var(--primary);
+}
+.you-learn:hover p {
+  color: var(--secondary);
+}
+
+@media (max-width: 992px) {
+  .why-choose .img,
+  .you-learn .img {
+    width: 50px;
+    height: 50px;
+  }
+  .you-learn {
+    padding: 24px;
+  }
+}
+.bg-deliver, .bg-deliver-4, .bg-deliver-3, .bg-deliver-2, .bg-deliver-1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 488/733;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.bg-deliver .sub-button, .bg-deliver-4 .sub-button, .bg-deliver-3 .sub-button, .bg-deliver-2 .sub-button, .bg-deliver-1 .sub-button {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.6s ease;
+}
+.bg-deliver-1 {
+  background: none;
+}
+.bg-deliver-2 {
+  background: none;
+}
+.bg-deliver-3 {
+  background: none;
+}
+.bg-deliver-4 {
+  background: none;
+}
+.bg-deliver::before, .bg-deliver-1::before, .bg-deliver-2::before, .bg-deliver-3::before, .bg-deliver-4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.6s ease-in-out;
+  z-index: 0;
+}
+.bg-deliver-1::before {
+  background-image: url(../../assets/image/figure-s7-cosmetology.png);
+}
+.bg-deliver-2::before {
+  background-image: url(../../assets/image/figure-s7-cosmetology.png);
+}
+.bg-deliver-3::before {
+  background-image: url(../../assets/image/figure-s7-cosmetology.png);
+}
+.bg-deliver-4::before {
+  background-image: url(../../assets/image/figure-s7-cosmetology.png);
+}
+.bg-deliver::after, .bg-deliver-1::after, .bg-deliver-2::after, .bg-deliver-3::after, .bg-deliver-4::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%);
+  z-index: 1;
+}
+.bg-deliver:hover .sub-button, .bg-deliver-1:hover .sub-button, .bg-deliver-2:hover .sub-button, .bg-deliver-3:hover .sub-button, .bg-deliver-4:hover .sub-button {
+  max-height: 100px;
+  transition: max-height 0.6s ease-in-out;
+}
+.bg-deliver:hover::before, .bg-deliver-1:hover::before, .bg-deliver-2:hover::before, .bg-deliver-3:hover::before, .bg-deliver-4:hover::before {
+  transform: scale(1.15);
+}
+.bg-deliver:hover::after, .bg-deliver-1:hover::after, .bg-deliver-2:hover::after, .bg-deliver-3:hover::after, .bg-deliver-4:hover::after {
+  background: rgba(0, 84, 144, 0.7490196078);
 }/*# sourceMappingURL=main.css.map */

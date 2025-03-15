@@ -487,13 +487,13 @@ select {
   gap: 10px;
   padding: 12px 16px;
   border-radius: 8px;
-  background-color: var(--primary);
+  background-color: var(--secondary);
   color: var(--primary-50);
   cursor: pointer;
   @extend .text-body-md-bold;
 
   &:hover {
-    background: var(--secondary);
+    background: var(--primary);
     color: var(--primary-50);
   }
 
@@ -1440,5 +1440,148 @@ hr {
         max-height: 519px;
       }
     }
+  }
+}
+
+.why-choose {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  &:hover {
+    p {
+      color: var(--secondary);
+    }
+    .img {
+      filter: brightness(0) invert(45%) sepia(90%) saturate(1500%)
+        hue-rotate(205deg);
+    }
+  }
+}
+.you-learn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  padding: 56px 34px;
+  border-radius: 16px;
+  background: var(--white);
+  box-shadow: 0px 4px 25px 0px rgba(0, 61, 184, 0.1);
+  border: 1px solid;
+  border-color: transparent;
+  &:hover {
+    border-color: var(--primary);
+    p {
+      color: var(--secondary);
+    }
+    // .img {
+    //   filter: brightness(0) invert(45%) sepia(90%) saturate(1500%)
+    //     hue-rotate(205deg);
+    // }
+  }
+}
+@media (max-width: 992px) {
+  .why-choose,
+  .you-learn {
+    .img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  .you-learn {
+    padding: 24px;
+  }
+}
+
+.bg-deliver {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 488/733;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  .sub-button {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.6s ease;
+  }
+  &-1 {
+    @extend .bg-deliver;
+    background: none; // Xóa background gốc
+  }
+
+  &-2 {
+    @extend .bg-deliver;
+    background: none;
+  }
+
+  &-3 {
+    @extend .bg-deliver;
+    background: none;
+  }
+  &-4 {
+    @extend .bg-deliver;
+    background: none;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.6s ease-in-out;
+    z-index: 0;
+  }
+
+  &-1::before {
+    background-image: url(../../assets/image/figure-s7-cosmetology.png);
+  }
+
+  &-2::before {
+    background-image: url(../../assets/image/figure-s7-cosmetology.png);
+  }
+
+  &-3::before {
+    background-image: url(../../assets/image/figure-s7-cosmetology.png);
+  }
+  &-4::before {
+    background-image: url(../../assets/image/figure-s7-cosmetology.png);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.7) 100%
+    );
+    z-index: 1;
+  }
+
+  &:hover {
+    .sub-button {
+      max-height: 100px;
+      transition: max-height 0.6s ease-in-out;
+    }
+  }
+  &:hover::before {
+    transform: scale(1.15);
+  }
+
+  &:hover::after {
+    background: #005490bf;
   }
 }
