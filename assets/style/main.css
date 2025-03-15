@@ -1089,6 +1089,10 @@ hr.footer-divider {
   max-height: 500px;
 }
 
+.sub-banner {
+  background: url(/assets/image/sub-banner.png) no-repeat left/cover;
+}
+
 .figure-hover {
   overflow: hidden;
 }

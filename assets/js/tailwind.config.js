@@ -37,8 +37,7 @@ tailwind.config = {
                 50: '#F5F7FF',
                 25: '#EFEFEF',
             },
-            // secondary: '#FFD04A',
-
+            secondary: '#4169e1',
             neutralc: {
                 // 1000: "#",
                 950: "#0D0D0D",
