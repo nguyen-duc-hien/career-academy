@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Instructor</title>
     <!-- taildwind css import -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/assets/js/tailwind.config.js"></script>
@@ -261,9 +261,365 @@
     </header>
     <main>
         <!-- -------------------- section 1 -------------------- -->
-        <section class="">
-            <div class="container"></div>
+        <style>
+            .ss-1-bg {
+                position: relative;
+                width: 100%;
+                background: url(/assets/image/banner-s1-cosmetology.png) no-repeat center/cover;
+            }
+
+            .ss-1-bg::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 0;
+                background: rgba(4, 20, 66, 0.80);
+            }
+        </style>
+        <section class="ss-1-bg h-[40vh] xl:h-[80vh] max-h-[553px]">
+            <div class="container relative flex flex-col w-full h-full justify-center">
+                <div class="flex flex-col gap-10 2xl:gap-[75px] pt-6 lg:pt-8 relative z-[2]">
+                    <nav class="breadcrumb text-body-lg-regular text-neutralc-50" aria-label="breadcrumb">
+                        <!-- Sử dụng schema.org để định nghĩa breadcrumb list -->
+                        <ol class="flex flex-wrap gap-3 items-center" itemscope
+                            itemtype="https://schema.org/BreadcrumbList">
+                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                <a href="#" class="hover:text-secondary" itemprop="item">
+                                    <span itemprop="name">Home</span>
+                                </a>
+                                <meta itemprop="position" content="1" />
+                            </li>
+                            <span>/</span>
+                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                <a href="#" class="hover:text-secondary" itemprop="item">
+                                    <span itemprop="name">Program</span>
+                                </a>
+                                <meta itemprop="position" content="1" />
+                            </li>
+                            <span>/</span>
+
+                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"
+                                aria-current="page">
+                                <span itemprop="name" class="text-neutralc-300">Instructor</span>
+                                <meta itemprop="position" content="4" />
+                            </li>
+                        </ol>
+                    </nav>
+                    <h1 class="text-heading-h1 text-neutralc-50 text-center">Instructor
+                    </h1>
+                </div>
+            </div>
         </section>
+        <!-- -------------------- section 2 -------------------- -->
+        <style>
+            .ss-2-bg {
+                position: relative;
+                width: 100%;
+                background: url(/assets/image/bg-s2-cosmetology.png) no-repeat center/cover;
+            }
+        </style>
+        <section class="ss-2-bg py-10 lg:py-[106px]">
+            <div class="container">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="flex flex-col gap-8 lg:max-w-[543px]">
+                        <div class="">
+                            <p class="text-body-md-medium text-primary-600">Introduction</p>
+                            <h2 class="text-heading-h3 text-neutralc-500">Instructor</h2>
+                        </div>
+                        <div class="flex flex-col gap-4">
+                            <p class="text-body-md-regular text-neutralc-800">Cosmetology at Career Academy of Hair
+                                Design in Fayetteville, Fort Smith, Rogers, Siloam Springs, and Springdale,
+                                Arkansas</p>
+                            <p class="text-body-md-regular text-neutralc-800">Design a future for yourself which sits at
+                                the forefront of fashion and beauty. Whether your goal is to help clients
+                                look and feel their best or land a position where your creativity can shine, a career in
+                                cosmetology starts with a
+                                cutting-edge education at an accredited cosmetology school.</p>
+                        </div>
+                        <div class="flex flex-col gap-6">
+                            <div class="flex items-center gap-2">
+                                <div class="flex items-center gap-2">
+                                    <figure><img src="/assets/image/icon/calendar.svg" alt="icon"></figure>
+                                    <p class="text-body-md-regular text-neutralc-600">Next Start Date:</p>
+                                </div>
+                                <div class="text-body-md-bold text-neutralc-900" id="countdown">00d : 00hrs : 00m
+                                </div>
+                            </div>
+                            <a href="#" class="button">Schedule now</a>
+
+                        </div>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden">
+                        <figure><img class="min-w-full" src="/assets/image/figure-s2-cosmetology.png" alt="figure">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- -------------------- section 3 -------------------- -->
+        <section class="bg-white py-10 lg:py-[116px]">
+            <div class="container">
+                <div class="w-full lg:max-w-[846px] mx-auto flex flex-col items-center justify-center gap-4">
+                    <h2 class="text-heading-h3 text-neutralc-500">Curriculum</h2>
+                    <p class="text-body-md-regular text-neutralc-700 text-center">Designed for all backgrounds—whether
+                        you're a recent graduate or making a career change—our program provides the tools,
+                        products, and hands-on training needed to earn your skincare licensure.</p>
+                </div>
+                <div class="mt-10 lg:mt-16">
+                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- single you will learn -->
+                        <div class="you-learn">
+                            <figure class="img w-[72px] h-[72px]"><img src="/assets/image/you-learn.svg" alt="icon">
+                            </figure>
+                            <p class="text-body-lg-regular text-neutralc-800 text-center">Haircutting, coloring,
+                                perming, and
+                                styling</p>
+                        </div>
+                        <!-- single you will learn -->
+                        <div class="you-learn">
+                            <figure class="img w-[72px] h-[72px]"><img src="/assets/image/you-learn-2.svg" alt="icon">
+                            </figure>
+                            <p class="text-body-lg-regular text-neutralc-800 text-center">Manicures, Pedicures,
+                                Acrylic Sets</p>
+                        </div>
+                        <!-- single you will learn -->
+                        <div class="you-learn">
+                            <figure class="img w-[72px] h-[72px]"><img src="/assets/image/you-learn-3.svg" alt="icon">
+                            </figure>
+                            <p class="text-body-lg-regular text-neutralc-800 text-center">Lash and Brow Services</p>
+                        </div>
+                        <!-- single you will learn -->
+                        <div class="you-learn">
+                            <figure class="img w-[72px] h-[72px]"><img src="/assets/image/you-learn-4.svg" alt="icon">
+                            </figure>
+                            <p class="text-body-lg-regular text-neutralc-800 text-center">Facials, Waxing, Makeup
+                                Application</p>
+                        </div>
+                        <!-- single you will learn -->
+                        <div class="you-learn">
+                            <figure class="img w-[72px] h-[72px]"><img src="/assets/image/you-learn.svg" alt="icon">
+                            </figure>
+                            <p class="text-body-lg-regular text-neutralc-800 text-center">Haircutting, coloring,
+                                perming, and
+                                styling</p>
+                        </div>
+                        <!-- single you will learn -->
+                        <div class="you-learn">
+                            <figure class="img w-[72px] h-[72px]"><img src="/assets/image/you-learn-2.svg" alt="icon">
+                            </figure>
+                            <p class="text-body-lg-regular text-neutralc-800 text-center">Manicures, Pedicures,
+                                Acrylic Sets</p>
+                        </div>
+                        <!-- single you will learn -->
+                        <div class="you-learn">
+                            <figure class="img w-[72px] h-[72px]"><img src="/assets/image/you-learn-3.svg" alt="icon">
+                            </figure>
+                            <p class="text-body-lg-regular text-neutralc-800 text-center">Lash and Brow Services</p>
+                        </div>
+                        <!-- single you will learn -->
+                        <div class="you-learn">
+                            <figure class="img w-[72px] h-[72px]"><img src="/assets/image/you-learn-4.svg" alt="icon">
+                            </figure>
+                            <p class="text-body-lg-regular text-neutralc-800 text-center">Facials, Waxing, Makeup
+                                Application</p>
+                        </div>
+                        <!-- single you will learn -->
+                        <div class="you-learn">
+                            <figure class="img w-[72px] h-[72px]"><img src="/assets/image/you-learn.svg" alt="icon">
+                            </figure>
+                            <p class="text-body-lg-regular text-neutralc-800 text-center">Haircutting, coloring,
+                                perming, and
+                                styling</p>
+                        </div>
+                        <!-- single you will learn -->
+                        <div class="you-learn">
+                            <figure class="img w-[72px] h-[72px]"><img src="/assets/image/you-learn-2.svg" alt="icon">
+                            </figure>
+                            <p class="text-body-lg-regular text-neutralc-800 text-center">Manicures, Pedicures,
+                                Acrylic Sets</p>
+                        </div>
+                        <!-- single you will learn -->
+                        <div class="you-learn">
+                            <figure class="img w-[72px] h-[72px]"><img src="/assets/image/you-learn-3.svg" alt="icon">
+                            </figure>
+                            <p class="text-body-lg-regular text-neutralc-800 text-center">Lash and Brow Services</p>
+                        </div>
+                        <!-- single you will learn -->
+                        <div class="you-learn">
+                            <figure class="img w-[72px] h-[72px]"><img src="/assets/image/you-learn-4.svg" alt="icon">
+                            </figure>
+                            <p class="text-body-lg-regular text-neutralc-800 text-center">Facials, Waxing, Makeup
+                                Application</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- -------------------- section 4 -------------------- -->
+        <style>
+            .ss-4-bg {
+                position: relative;
+                width: 100%;
+                background: url(/assets/image/s4-cosmetology.png) no-repeat center/cover;
+            }
+
+            .career-opportunities-row {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 24px;
+                border-radius: 8px;
+                padding: 24px;
+                color: #333;
+                background: #fff;
+                cursor: pointer;
+            }
+
+            .row-icon {
+                display: none;
+            }
+
+            .career-opportunities-row:hover {
+                background: #2955D9;
+                color: #fff;
+            }
+
+            .career-opportunities-row.active {
+                background: #2955D9;
+                color: #fff;
+            }
+
+            .career-opportunities-row:hover .row-icon {
+                display: block;
+            }
+
+            .career-opportunities-row.active .row-icon {
+                display: block;
+            }
+
+            .career-opportunities-content {
+                display: none;
+            }
+
+            .career-opportunities-content.active {
+                display: block;
+            }
+
+            .career-opportunities-li {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .career-opportunities-li li {
+                position: relative;
+                padding-left: 36px;
+                display: flex;
+                align-items: center;
+            }
+
+            .career-opportunities-li li::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 24px;
+                height: 24px;
+                background: url('/assets/image/icon/check-circle.svg') no-repeat center/cover;
+            }
+        </style>
+        <section class="ss-4-bg py-10 lg:py-[100px]">
+            <div class="container">
+                <div class="flex flex-col gap-4 w-full lg:max-w-[736px]">
+                    <h2 class="text-heading-h3 text-neutralc-800">Career Opportunities</h2>
+                    <p class="text-body-md-regular text-neutralc-600">Become part of a thriving network of beauty
+                        professionals. After passing your licensing exam, you’ll have the
+                        opportunity to build a career.</p>
+                </div>
+                <div class="mt-8 lg:mt-14">
+                    <div class="flex flex-col lg:flex-row gap-10 justify-between">
+                        <div class="w-full lg:w-1/3 lg:max-w-[412px] flex flex-col gap-4">
+                            <!-- single career button -->
+                            <div class="career-opportunities-row text-body-lg-medium">
+                                Cosmetology Instructor
+                                <figure class="row-icon"><img src="/assets/image/icon/arrow-right-up.svg" alt="icon">
+                                </figure>
+                            </div>
+                            <!-- single career button -->
+                            <div class="career-opportunities-row text-body-lg-medium">
+                                Esthetics Instructor
+                                <figure class="row-icon"><img src="/assets/image/icon/arrow-right-up.svg" alt="icon">
+                                </figure>
+                            </div>
+                            <!-- single career button -->
+                            <div class="career-opportunities-row text-body-lg-medium">
+                                Nail Instructor
+                                <figure class="row-icon"><img src="/assets/image/icon/arrow-right-up.svg" alt="icon">
+                                </figure>
+                            </div>
+
+                        </div>
+                        <div class="w-full lg:w-[60%] lg:max-w-[766px]">
+                            <!-- single career view -->
+                            <div class="career-opportunities-content">
+                                <div class="flex flex-col gap-6">
+                                    <p class="text-body-3xl-bold text-neutralc-800">Required for Licensure in Arkansas -
+                                        600 hours</p>
+                                    <ul class="career-opportunities-li">
+                                        <li class="text-body-lg-regular text-neutralc-800">Cosmetology Instructor</li>
+                                        <li class="text-body-lg-regular text-neutralc-800">Cosmetology Instructor</li>
+                                        <li class="text-body-lg-regular text-neutralc-800">Cosmetology Instructor</li>
+                                        <li class="text-body-lg-regular text-neutralc-800">Cosmetology Instructor</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- single career view -->
+                            <div class="career-opportunities-content">
+                                <div class="flex flex-col gap-6">
+                                    <p class="text-body-3xl-bold text-neutralc-800">Required for Licensure in Arkansas -
+                                        600 hours 2</p>
+                                    <ul class="career-opportunities-li">
+                                        <li class="text-body-lg-regular text-neutralc-800">Cosmetology Instructor</li>
+                                        <li class="text-body-lg-regular text-neutralc-800">Cosmetology Instructor</li>
+                                        <li class="text-body-lg-regular text-neutralc-800">Cosmetology Instructor</li>
+                                        <li class="text-body-lg-regular text-neutralc-800">Cosmetology Instructor</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- single career view -->
+                            <div class="career-opportunities-content">
+                                <div class="flex flex-col gap-6">
+                                    <p class="text-body-3xl-bold text-neutralc-800">Required for Licensure in Arkansas -
+                                        600 hours 3</p>
+                                    <ul class="career-opportunities-li">
+                                        <li class="text-body-lg-regular text-neutralc-800">Cosmetology Instructor</li>
+                                        <li class="text-body-lg-regular text-neutralc-800">Cosmetology Instructor</li>
+                                        <li class="text-body-lg-regular text-neutralc-800">Cosmetology Instructor</li>
+                                        <li class="text-body-lg-regular text-neutralc-800">Cosmetology Instructor</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- -------------------- section 5 -------------------- -->
+
+        <!-- -------------------- section 6 -------------------- -->
+
+        <!-- -------------------- section 7 -------------------- -->
+
+
     </main>
     <footer class="footer bg-[#1A295E] py-10 xl:pt-16 pb-6 xl:pb-12">
         <div class="container">
@@ -463,7 +819,97 @@
     <script defer src="/assets/js/header.js"></script>
     <script defer src="/assets/js/accordion.js"></script>
 
+    <!-- count-down script -->
+    <script>
+        function startCountdown(targetDate) {
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
 
+                if (distance < 0) {
+                    document.getElementById("countdown").textContent = "00d : 00hrs : 00m";
+                    clearInterval(interval);
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+                document.getElementById("countdown").textContent =
+                    `${days}d : ${hours}hrs : ${minutes}m`;
+            }
+
+            updateCountdown();
+            const interval = setInterval(updateCountdown, 60000);
+        }
+
+        // Đặt ngày đếm ngược (năm - tháng (tháng - 1)- ngày - giờ - phút - giây)
+        const targetDate = new Date(2025, 4, 6, 12, 40, 0).getTime();
+        startCountdown(targetDate);
+    </script>
+
+    <!-- swiper script -->
+    <script defer>
+        const swiper = new Swiper('#career-1-swiper', {
+            slidesPerView: 2,
+            spaceBetween: 24,
+            loop: true,
+            speed: 10000,
+            autoplay: {
+                delay: 0,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                768: { slidesPerView: 3 },
+                992: { slidesPerView: 4 },
+                1440: { slidesPerView: 6 },
+                2560: { slidesPerView: 8 }
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+            // on: {
+            //     autoplayTimeLeft(s) {
+            //         s.slidePrev(); // Đảo hướng autoplay thay vì `reverseDirection`
+            //     }
+            // }
+        });
+
+    </script>
+
+    <!-- career opportunities js -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const rows = document.querySelectorAll(".career-opportunities-row");
+            const contents = document.querySelectorAll(".career-opportunities-content");
+
+            // Mặc định active phần tử đầu tiên
+            rows[0].classList.add("active");
+            contents[0].classList.add("active");
+
+            rows.forEach((row, index) => {
+                row.addEventListener("click", () => {
+                    // Xóa class 'active' khỏi tất cả các phần tử
+                    rows.forEach((r) => r.classList.remove("active"));
+                    contents.forEach((c) => c.classList.remove("active"));
+
+                    // Thêm class 'active' cho phần tử được click
+                    row.classList.add("active");
+                    contents[index].classList.add("active");
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

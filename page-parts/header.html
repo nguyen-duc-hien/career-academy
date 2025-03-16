@@ -1,22 +1,22 @@
 <header>
     <div class="header">
         <!-- header pc -->
-        <div class="header-pc hidden lg:block bg-white fixed top-0 w-full h-[176px] z-[5]">
+        <div class="header-pc hidden lg:block fixed top-0 w-full z-[5]">
             <!-- first row -->
             <div class="first-row bg-red-30" style="backdrop-filter: blur(25px);">
                 <div class="container">
-                    <div class="w-full flex items-center justify-between gap-10 py-4">
+                    <div class="w-full flex items-center justify-between gap-10 py-5">
                         <div class="flex items-center justify-between gap-10">
-                            <p class="text-body-3xl-bold text-gray-10">Hablamos Espanol</p>
+                            <p class="text-body-3xl-bold text-neutralc-50">Hablamos Espanol</p>
                             <div class="flex items-center gap-6">
-                                <a href="#" class="link-light">
-                                    <figure class="w-6 h-6"><img src="/assets/image/icon/phone-white.svg" alt="icon">
+                                <a href="#" class="link-light text-body-3xl-bold">
+                                    <figure class="w-8 h-8"><img src="/assets/image/icon/phone-white.svg" alt="icon">
                                     </figure>
-                                    770-449-1740
+                                    1-855-375-4247
                                 </a>
                                 <hr class="divider-v-6">
-                                <a href="#" class="link-light">
-                                    <figure class="w-6 h-6"><img src="/assets/image/icon/letter-white.svg" alt="icon">
+                                <a href="#" class="link-light text-body-3xl-bold">
+                                    <figure class="w-8 h-8"><img src="/assets/image/icon/letter-white.svg" alt="icon">
                                     </figure>
                                     example@gmail.com
                                 </a>
@@ -52,32 +52,46 @@
                 </div>
             </div>
             <!-- second row -->
-            <div class="py-2">
-                <div class="container flex items-center justify-between gap-10">
+            <div class="mt-8 pb-2">
+                <div class="container flex items-center gap-10">
                     <a href="/">
-                        <figure class="max-w-[234px]"><img src="/assets/image/header-logo.png" alt="logo"></figure>
+                        <figure class="max-w-[216px]"><img src="/assets/image/head-logo.svg" alt="logo"></figure>
                     </a>
-                    <nav class="w-[75%]">
-                        <ul class="flex items-center justify-between gap-2 2xl:gap-4">
-                            <li class="text-body-sm-uppercase">
+                    <nav class="">
+                        <ul class="flex items-center justify-between gap-4 2xl:gap-10">
+                            <li class="text-body-md-bold">
                                 <a href="#" class="link-nav">About us</a>
                             </li>
-                            <li class="text-body-sm-uppercase">
+                            <li class="text-body-md-bold sub-button">
                                 <a href="#" class="link-nav">Programs
                                     <figure class="w-6 h-6"><img src="/assets/image/icon/nav-chev-down.svg" alt="icon">
                                     </figure>
                                 </a>
+                                <ul class="sub-menu">
+                                    <li class="sub-item text-body-md-bold">
+                                        <a href="#" class="link-nav">Program 1</a>
+                                    </li>
+                                    <li class="sub-item text-body-md-bold">
+                                        <a href="#" class="link-nav">Program 2</a>
+                                    </li>
+                                    <li class="sub-item text-body-md-bold">
+                                        <a href="#" class="link-nav">Program 3</a>
+                                    </li>
+                                    <li class="sub-item text-body-md-bold">
+                                        <a href="#" class="link-nav">Program 4</a>
+                                    </li>
+                                </ul>
                             </li>
-                            <li class="text-body-sm-uppercase">
+                            <li class="text-body-md-bold">
                                 <a href="#" class="link-nav">Enrollment</a>
                             </li>
-                            <li class="text-body-sm-uppercase">
+                            <li class="text-body-md-bold">
                                 <a href="#" class="link-nav">Salon Services</a>
                             </li>
-                            <li class="text-body-sm-uppercase">
+                            <li class="text-body-md-bold">
                                 <a href="#" class="link-nav">Student Gallery</a>
                             </li>
-                            <li class="text-body-sm-uppercase">
+                            <li class="text-body-md-bold">
                                 <a href="#" class="link-nav">Contact us</a>
                             </li>
                         </ul>
@@ -86,29 +100,31 @@
             </div>
         </div>
         <!-- header-mobile -->
-        <div class="flex lg:hidden mobile-header bg-white justify-between container py-5">
-            <a href="/">
-                <div class="logo">
-                    <figure class="max-w-[120px]">
-                        <img src="/assets/image/header-logo.png" alt="logo">
-                    </figure>
-                </div>
-            </a>
+        <div class="w-full lg:hidden header-mobile fixed top-0 z-[5] ">
+            <div class="container flex justify-between py-5">
+                <a href="/">
+                    <div class="logo">
+                        <figure class="max-w-[120px]">
+                            <img src="/assets/image/head-logo.svg" alt="logo">
+                        </figure>
+                    </div>
+                </a>
 
-            <button class="breadcrumb-button">
-                <figure>
-                    <img src="/assets/image/icon/3bar.svg" alt="">
-                </figure>
-            </button>
+                <button class="breadcrumb-button">
+                    <figure>
+                        <img src="/assets/image/icon/3bar-white.svg" alt="">
+                    </figure>
+                </button>
+            </div>
 
             <div
                 class="breadcrumb-header hidden fixed w-[70vw] max-w-[350px] h-[100vh] top-0 right-0 z-[5] transform transition-transform duration-300 ease-in-out translate-x-full">
-                <div class=" flex flex-col gap-10 bg-red-30 w-full h-full p-6">
+                <div class=" flex flex-col gap-10 bg-primary-400 w-full h-full p-6">
                     <div class="flex items-center justify-between">
                         <a href="/">
                             <div class="logo">
                                 <figure class="max-w-[120px]">
-                                    <img src="/assets/image/header-logo.png" alt="logo">
+                                    <img src="/assets/image/head-logo.svg" alt="logo">
                                 </figure>
                             </div>
                         </a>
@@ -121,28 +137,42 @@
 
                     <div class="breadcrumb-container custom-scrollbar">
                         <nav>
-                            <ul class="flex flex-col gap-2 2xl:gap-4">
-                                <li class="text-body-sm-uppercase">
-                                    <a href="#" class="link-light">About us</a>
+                            <ul class="flex flex-col justify-between gap-4">
+                                <li class="text-body-md-bold">
+                                    <a href="#" class="link-nav">About us</a>
                                 </li>
-                                <li class="text-body-sm-uppercase">
-                                    <a href="#" class="link-light">Programs
+                                <li class="text-body-md-bold sub-button">
+                                    <a href="#" class="link-nav flex items-center cursor-pointer">Programs
                                         <figure class="w-6 h-6"><img src="/assets/image/icon/nav-chev-down.svg"
                                                 alt="icon">
                                         </figure>
                                     </a>
+                                    <ul class="sub-menu mobile">
+                                        <li class="sub-item mobile text-body-md-bold">
+                                            <a href="#" class="link-nav">Program 1</a>
+                                        </li>
+                                        <li class="sub-item mobile text-body-md-bold">
+                                            <a href="#" class="link-nav">Program 2</a>
+                                        </li>
+                                        <li class="sub-item mobile text-body-md-bold">
+                                            <a href="#" class="link-nav">Program 3</a>
+                                        </li>
+                                        <li class="sub-item mobile text-body-md-bold">
+                                            <a href="#" class="link-nav">Program 4</a>
+                                        </li>
+                                    </ul>
                                 </li>
-                                <li class="text-body-sm-uppercase">
-                                    <a href="#" class="link-light">Enrollment</a>
+                                <li class="text-body-md-bold">
+                                    <a href="#" class="link-nav">Enrollment</a>
                                 </li>
-                                <li class="text-body-sm-uppercase">
-                                    <a href="#" class="link-light">Salon Services</a>
+                                <li class="text-body-md-bold">
+                                    <a href="#" class="link-nav">Salon Services</a>
                                 </li>
-                                <li class="text-body-sm-uppercase">
-                                    <a href="#" class="link-light">Student Gallery</a>
+                                <li class="text-body-md-bold">
+                                    <a href="#" class="link-nav">Student Gallery</a>
                                 </li>
-                                <li class="text-body-sm-uppercase">
-                                    <a href="#" class="link-light">Contact us</a>
+                                <li class="text-body-md-bold">
+                                    <a href="#" class="link-nav">Contact us</a>
                                 </li>
                             </ul>
                         </nav>
@@ -194,8 +224,8 @@
 
         </div>
     </div>
-    <div class="h-[176px] hidden lg:block"></div>
 </header>
-
 <!-- header script -->
+<script defer src="/assets/js/header-scroll.js"></script>
+<script defer src="/assets/js/sub-menu.js"></script>
 <script defer src="/assets/js/header.js"></script>
