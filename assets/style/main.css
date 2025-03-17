@@ -1832,6 +1832,85 @@ hr.footer-divider {
   display: none;
 }
 
+.career-opportunities-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-radius: 8px;
+  padding: 24px;
+  color: #333;
+  background: #fff;
+  cursor: pointer;
+}
+.career-opportunities-row .row-icon {
+  display: none;
+}
+.career-opportunities-row:hover, .career-opportunities-row.active {
+  background: #2955d9;
+  color: #fff;
+}
+.career-opportunities-row:hover .row-icon, .career-opportunities-row.active .row-icon {
+  display: block;
+}
+.career-opportunities-content {
+  display: none;
+}
+.career-opportunities-content.active {
+  display: block;
+}
+.career-opportunities-li {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.career-opportunities-li li {
+  position: relative;
+  padding-left: 36px;
+  display: flex;
+  align-items: center;
+}
+.career-opportunities-li li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background: url("/assets/image/icon/check-circle.svg") no-repeat center/cover;
+}
+
+.service-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-radius: 8px;
+  padding: 24px;
+  color: #333;
+  background: #fff;
+  cursor: pointer;
+}
+.service-button .row-icon {
+  display: none;
+}
+.service-button:hover, .service-button.active {
+  background: #2955d9;
+  color: #fff;
+}
+.service-button:hover .row-icon, .service-button.active .row-icon {
+  display: block;
+}
+.service-view {
+  display: none;
+}
+.service-view.active {
+  display: block;
+}
+
 .our-location {
   position: relative;
   display: flex;

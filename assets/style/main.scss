@@ -1678,6 +1678,101 @@ hr {
     }
   }
 }
+.career-opportunities {
+  &-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    border-radius: 8px;
+    padding: 24px;
+    color: #333;
+    background: #fff;
+    cursor: pointer;
+
+    .row-icon {
+      display: none;
+    }
+
+    &:hover,
+    &.active {
+      background: #2955d9;
+      color: #fff;
+
+      .row-icon {
+        display: block;
+      }
+    }
+  }
+  &-content {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+  &-li {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    li {
+      position: relative;
+      padding-left: 36px;
+      display: flex;
+      align-items: center;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        background: url("/assets/image/icon/check-circle.svg") no-repeat
+          center/cover;
+      }
+    }
+  }
+}
+
+.service {
+  &-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    border-radius: 8px;
+    padding: 24px;
+    color: #333;
+    background: #fff;
+    cursor: pointer;
+
+    .row-icon {
+      display: none;
+    }
+
+    &:hover,
+    &.active {
+      background: #2955d9;
+      color: #fff;
+
+      .row-icon {
+        display: block;
+      }
+    }
+  }
+  &-view {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
 
 // our location
 .our-location {
