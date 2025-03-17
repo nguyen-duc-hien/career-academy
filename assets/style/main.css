@@ -1639,6 +1639,97 @@ hr.footer-divider {
   }
 }
 
+.action-program {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  width: 25%;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 16px;
+  transition: all 0.5s ease-in-out;
+}
+@media (max-width: 768px) {
+  .action-program {
+    width: 100%;
+    height: 33.3333333333%;
+  }
+}
+.action-program:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+  z-index: 1;
+}
+.action-program .action-content {
+  position: absolute;
+  bottom: 40px;
+  width: 80%;
+  max-width: 222px;
+  z-index: 2;
+}
+@media (max-width: 768px) {
+  .action-program .action-content {
+    width: 90%;
+  }
+}
+.action-program .action-content .sub-items {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+.action-program:hover {
+  transition: all 0.5s ease-in-out;
+  width: 40%;
+}
+.action-program:hover .action-content {
+  max-width: 519px;
+}
+.action-program:hover .action-content .sub-items {
+  max-height: 600px;
+  overflow: visible;
+  transition: all 0.5s ease-in-out;
+}
+@media (max-width: 768px) {
+  .action-program {
+    pointer-events: auto;
+  }
+  .action-program:hover {
+    width: 100%;
+  }
+}
+.action-program.active {
+  transition: all 0.5s ease-in-out;
+  -webkit-backdrop-filter: unset;
+          backdrop-filter: unset;
+  width: 56%;
+}
+.action-program.active .action-content {
+  max-width: 519px;
+}
+.action-program.active .action-content .sub-items {
+  max-height: 600px;
+  overflow: visible;
+  transition: all 0.5s ease-in-out;
+}
+@media (max-width: 768px) {
+  .action-program.active {
+    width: 100%;
+    height: 56%;
+  }
+  .action-program.active .action-content {
+    max-height: 519px;
+  }
+}
+
 .why-choose {
   display: flex;
   flex-direction: column;
@@ -1843,6 +1934,9 @@ hr.footer-divider {
   color: #333;
   background: #fff;
   cursor: pointer;
+}
+.career-opportunities-row.bg-50 {
+  background: var(--neutral-50);
 }
 .career-opportunities-row .row-icon {
   display: none;
