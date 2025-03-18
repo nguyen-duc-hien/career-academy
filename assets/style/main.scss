@@ -1940,106 +1940,116 @@ hr {
 }
 
 .gallery {
-  &-item {
-    position: relative;
-    border-radius: 16px;
-    overflow: hidden;
-    .before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 4px;
+  &-view {
+    .gallery-item {
+      position: relative;
       border-radius: 16px;
-      background: linear-gradient(
-        0deg,
-        rgba(26, 41, 94, 0.72) 0%,
-        rgba(26, 41, 94, 0.72) 100%
-      );
-      transform: translateY(100%);
-      transition: all 0.5s ease-in-out;
-    }
-    figure {
-      min-width: 100%;
-      max-height: 482px;
-      @media (max-width: 1440px) {
-        max-height: 433px;
-      }
-      @media (max-width: 1280px) {
-        max-height: 350px;
-      }
-      img {
-        min-width: 100%;
-      }
-    }
-    &:hover {
+      overflow: hidden;
       .before {
-        transform: translateY(0);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        border-radius: 16px;
+        background: linear-gradient(
+          0deg,
+          rgba(26, 41, 94, 0.72) 0%,
+          rgba(26, 41, 94, 0.72) 100%
+        );
+        transform: translateY(100%);
         transition: all 0.5s ease-in-out;
       }
-    }
-    &.row-1,
-    &.row-5 {
-      grid-column: span 4;
-      @media (max-width: 992px) {
-        grid-column: span 6;
-      }
-      @media (max-width: 552px) {
-        grid-column: span 12;
-      }
-    }
-    &.row-2 {
-      &.items-1 {
-        grid-column: span 8;
-        @media (max-width: 992px) {
-          grid-column: span 6;
+      figure {
+        min-width: 100%;
+        max-height: 482px;
+        @media (max-width: 1440px) {
+          max-height: 433px;
         }
-        @media (max-width: 552px) {
-          grid-column: span 12;
+        @media (max-width: 1280px) {
+          max-height: 350px;
+        }
+        img {
+          min-width: 100%;
+        }
+      }
+      &:hover {
+        .before {
+          transform: translateY(0);
+          transition: all 0.5s ease-in-out;
         }
       }
 
-      &.items-2 {
+      &:nth-child(1) {
         grid-column: span 4;
-        @media (max-width: 992px) {
-          grid-column: span 6;
-        }
-        @media (max-width: 552px) {
-          grid-column: span 12;
-        }
       }
-    }
-    &.row-3 {
-      grid-column: span 6;
-      @media (max-width: 992px) {
+      &:nth-child(2) {
+        grid-column: span 4;
+      }
+      &:nth-child(3) {
+        grid-column: span 4;
+      }
+      &:nth-child(4) {
+        grid-column: span 8;
+      }
+      &:nth-child(5) {
+        grid-column: span 4;
+      }
+      &:nth-child(6) {
         grid-column: span 6;
       }
-      @media (max-width: 552px) {
-        grid-column: span 12;
+      &:nth-child(7) {
+        grid-column: span 6;
       }
-    }
-    &.row-4 {
-      &.items-1 {
+      &:nth-child(8) {
         grid-column: span 4;
-        @media (max-width: 992px) {
+      }
+      &:nth-child(9) {
+        grid-column: span 8;
+      }
+      &:nth-child(10) {
+        grid-column: span 4;
+      }
+      &:nth-child(11) {
+        grid-column: span 4;
+      }
+      &:nth-child(12) {
+        grid-column: span 4;
+      }
+      @media (max-width: 992px) {
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6),
+        &:nth-child(7),
+        &:nth-child(8),
+        &:nth-child(9),
+        &:nth-child(10),
+        &:nth-child(11),
+        &:nth-child(12) {
           grid-column: span 6;
-        }
-        @media (max-width: 552px) {
-          grid-column: span 12;
         }
       }
-
-      &.items-2 {
-        grid-column: span 8;
-        @media (max-width: 992px) {
-          grid-column: span 6;
-        }
-        @media (max-width: 552px) {
+      @media (max-width: 552px) {
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6),
+        &:nth-child(7),
+        &:nth-child(8),
+        &:nth-child(9),
+        &:nth-child(10),
+        &:nth-child(11),
+        &:nth-child(12) {
           grid-column: span 12;
         }
       }
