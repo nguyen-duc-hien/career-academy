@@ -1938,3 +1938,111 @@ hr {
     );
   }
 }
+
+.gallery {
+  &-item {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    .before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      border-radius: 16px;
+      background: linear-gradient(
+        0deg,
+        rgba(26, 41, 94, 0.72) 0%,
+        rgba(26, 41, 94, 0.72) 100%
+      );
+      transform: translateY(100%);
+      transition: all 0.5s ease-in-out;
+    }
+    figure {
+      min-width: 100%;
+      max-height: 482px;
+      @media (max-width: 1440px) {
+        max-height: 433px;
+      }
+      @media (max-width: 1280px) {
+        max-height: 350px;
+      }
+      img {
+        min-width: 100%;
+      }
+    }
+    &:hover {
+      .before {
+        transform: translateY(0);
+        transition: all 0.5s ease-in-out;
+      }
+    }
+    &.row-1,
+    &.row-5 {
+      grid-column: span 4;
+      @media (max-width: 992px) {
+        grid-column: span 6;
+      }
+      @media (max-width: 552px) {
+        grid-column: span 12;
+      }
+    }
+    &.row-2 {
+      &.items-1 {
+        grid-column: span 8;
+        @media (max-width: 992px) {
+          grid-column: span 6;
+        }
+        @media (max-width: 552px) {
+          grid-column: span 12;
+        }
+      }
+
+      &.items-2 {
+        grid-column: span 4;
+        @media (max-width: 992px) {
+          grid-column: span 6;
+        }
+        @media (max-width: 552px) {
+          grid-column: span 12;
+        }
+      }
+    }
+    &.row-3 {
+      grid-column: span 6;
+      @media (max-width: 992px) {
+        grid-column: span 6;
+      }
+      @media (max-width: 552px) {
+        grid-column: span 12;
+      }
+    }
+    &.row-4 {
+      &.items-1 {
+        grid-column: span 4;
+        @media (max-width: 992px) {
+          grid-column: span 6;
+        }
+        @media (max-width: 552px) {
+          grid-column: span 12;
+        }
+      }
+
+      &.items-2 {
+        grid-column: span 8;
+        @media (max-width: 992px) {
+          grid-column: span 6;
+        }
+        @media (max-width: 552px) {
+          grid-column: span 12;
+        }
+      }
+    }
+  }
+}
