@@ -259,7 +259,7 @@
             </div>
         </div>
     </header>
-    ; <main>
+    <main>
         <!-- -------------------- section 1 -------------------- -->
         <style>
             .ss-1-bg {
@@ -330,20 +330,56 @@
                         beauty careers. Explore our programs, tour our campus, and enjoy our services.
                     </p>
                 </div>
-                <figure class="rounded-2xl overflow-hidden"><img class="min-w-full" src="/assets/image/fayette-img.png"
-                        alt="img"></figure>
+                <figure class="mt-10 lg:mt-16 rounded-2xl overflow-hidden"><img class="min-w-full"
+                        src="/assets/image/fayette-img.png" alt="img"></figure>
             </div>
         </section>
         <!-- -------------------- section 3 -------------------- -->
+        <style>
+            .why-choose-view {
+                display: none;
+                flex-direction: column;
+                justify-content: center;
+                gap: 24px;
+            }
+
+            .why-choose-view.active {
+                display: flex;
+            }
+        </style>
         <section class="py-10 lg:py-[100px]">
             <div class="container">
                 <div class="grid grid-cols-1 lg:grid-cols-2">
                     <figure class="lg:w-[82%] lg:max-w-[520px] lg:min-h-[374px] rounded-2xl overflow-hidden"><img
                             class="min-w-full" src="/assets/image/fayette-img.png" alt="img">
                     </figure>
-                    <div class="flex flex-col justify-center gap-6 lg:max-w-[842px] mx-auto">
+                    <div id="financial" class="why-choose-view lg:max-w-[842px] mx-auto">
                         <p class="text-body-md-bold text-uppercase text-primary-600">WHY CHOOSE US</p>
-                        <h2 class="text-heading-h3 text-neutralc-500">Fayetteville, AR</h2>
+                        <h2 class="text-heading-h3 text-neutralc-500">Financial Aid</h2>
+                        <p class="text-body-md-regular text-neutralc-600">
+                            We understand that financial barriers can hinder your progress. That's why we offer a
+                            variety of financial aid options
+                            to ensure you can focus on your learning journey without the stress of financial
+                            constraints. Our support team is always
+                            available to guide you through the process and help you find the best solution for your
+                            needs.
+                        </p>
+                    </div>
+                    <div id="esthetics" class="why-choose-view lg:max-w-[842px] mx-auto">
+                        <p class="text-body-md-bold text-uppercase text-primary-600">WHY CHOOSE US</p>
+                        <h2 class="text-heading-h3 text-neutralc-500">Esthetics Instructor</h2>
+                        <p class="text-body-md-regular text-neutralc-600">
+                            We understand that financial barriers can hinder your progress. That's why we offer a
+                            variety of financial aid options
+                            to ensure you can focus on your learning journey without the stress of financial
+                            constraints. Our support team is always
+                            available to guide you through the process and help you find the best solution for your
+                            needs.
+                        </p>
+                    </div>
+                    <div id="nail" class="why-choose-view lg:max-w-[842px] mx-auto">
+                        <p class="text-body-md-bold text-uppercase text-primary-600">WHY CHOOSE US</p>
+                        <h2 class="text-heading-h3 text-neutralc-500">Nail Instructor</h2>
                         <p class="text-body-md-regular text-neutralc-600">
                             We understand that financial barriers can hinder your progress. That's why we offer a
                             variety of financial aid options
@@ -357,26 +393,62 @@
 
                 <div class="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-6">
                     <!-- single career button -->
-                    <a href="#" class="career-opportunities-row bg-50 text-body-lg-medium">
+                    <button data-id="financial" class="career-opportunities-row active bg-50 text-body-lg-medium">
                         Cosmetology Instructor
                         <figure class="row-icon"><img src="/assets/image/icon/arrow-right-up.svg" alt="icon">
                         </figure>
-                    </a>
+                    </button>
                     <!-- single career button -->
-                    <a href="#" class="career-opportunities-row bg-50 text-body-lg-medium">
+                    <button data-id="esthetics" class="career-opportunities-row bg-50 text-body-lg-medium">
                         Esthetics Instructor
                         <figure class="row-icon"><img src="/assets/image/icon/arrow-right-up.svg" alt="icon">
                         </figure>
-                    </a>
+                    </button>
                     <!-- single career button -->
-                    <a href="#" class="career-opportunities-row bg-50 text-body-lg-medium">
+                    <button data-id="nail" class="career-opportunities-row bg-50 text-body-lg-medium">
                         Nail Instructor
                         <figure class="row-icon"><img src="/assets/image/icon/arrow-right-up.svg" alt="icon">
                         </figure>
-                    </a>
+                    </button>
                 </div>
             </div>
         </section>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const buttons = document.querySelectorAll(".career-opportunities-row");
+                const views = document.querySelectorAll(".why-choose-view");
+
+                buttons.forEach(button => {
+                    button.addEventListener("click", function () {
+                        const targetId = this.getAttribute("data-id");
+
+                        // Xóa class active khỏi tất cả các view
+                        views.forEach(view => view.classList.remove("active"));
+
+                        // Thêm class active vào view được chọn
+                        const targetView = document.getElementById(targetId);
+                        if (targetView) {
+                            targetView.classList.add("active");
+                        }
+
+                        // Xóa class active khỏi tất cả các nút
+                        buttons.forEach(btn => btn.classList.remove("active"));
+
+                        // Thêm class active vào nút được chọn
+                        this.classList.add("active");
+                    });
+                });
+
+                // Mặc định thêm class active cho phần tử đầu tiên
+                if (views.length > 0) {
+                    views[0].classList.add("active");
+                }
+                if (buttons.length > 0) {
+                    buttons[0].classList.add("active");
+                }
+            });
+
+        </script>
 
         <!-- -------------------- section 4 -------------------- -->
         <style>
@@ -398,7 +470,7 @@
                         nunc nec. Iaculis mi sed convallis suspendisse. Fames aliquet nunc vitae vitae.
                     </p>
                 </div>
-                <div class="flex flex-col md:flex-row gap-6">
+                <div class="mt-10 lg:mt-16 flex flex-col md:flex-row gap-6">
                     <div class="action-program">
                         <figure class="min-w-full h-[373px]"><img class="min-w-full" src="/assets/image/career-img.png"
                                 alt="img">
@@ -461,83 +533,390 @@
                                     service.
                                 </span>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="">
-            <!-- find our location -->
-            <div class="mt-10 lg:mt-[100px] container">
-                <h2 class="text-heading-h3 text-neutralc-950">Find our locations</h2>
-                <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-6">
-                    <!-- single location -->
-                    <div class="our-location">
-                        <figure class="w-full h-full"><img class=" min-w-full min-h-[269px]"
-                                src="/assets/image/our-service.png" alt="image">
-                        </figure>
-                        <div class="context">
-                            <p class="text-body-lg-bold text-white">Fayetteville Campus</p>
-                            <a href="#" class="sub-button">
-                                <figure><img src="/assets/image/icon/arrow-right-up-circle.svg" alt="icon"></figure>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- single location -->
-                    <div class="our-location">
-                        <figure class="w-full h-full"><img class=" min-w-full min-h-[269px]"
-                                src="/assets/image/our-service.png" alt="image">
-                        </figure>
-                        <div class="context">
-                            <p class="text-body-lg-bold text-white">Fayetteville Campus</p>
-                            <a href="#" class="sub-button">
-                                <figure><img src="/assets/image/icon/arrow-right-up-circle.svg" alt="icon"></figure>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- single location -->
-                    <div class="our-location">
-                        <figure class="w-full h-full"><img class=" min-w-full min-h-[269px]"
-                                src="/assets/image/our-service.png" alt="image">
-                        </figure>
-                        <div class="context">
-                            <p class="text-body-lg-bold text-white">Fayetteville Campus</p>
-                            <a href="#" class="sub-button">
-                                <figure><img src="/assets/image/icon/arrow-right-up-circle.svg" alt="icon"></figure>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- single location -->
-                    <div class="our-location">
-                        <figure class="w-full h-full"><img class=" min-w-full min-h-[269px]"
-                                src="/assets/image/our-service.png" alt="image">
-                        </figure>
-                        <div class="context">
-                            <p class="text-body-lg-bold text-white">Fayetteville Campus</p>
-                            <a href="#" class="sub-button">
-                                <figure><img src="/assets/image/icon/arrow-right-up-circle.svg" alt="icon"></figure>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- single location -->
-                    <div class="our-location">
-                        <figure class="w-full h-full"><img class=" min-w-full min-h-[269px]"
-                                src="/assets/image/our-service.png" alt="image">
-                        </figure>
-                        <div class="context">
-                            <p class="text-body-lg-bold text-white">Fayetteville Campus</p>
-                            <a href="#" class="sub-button">
-                                <figure><img src="/assets/image/icon/arrow-right-up-circle.svg" alt="icon"></figure>
-                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- -------------------- section 5 -------------------- -->
+        <style>
+            .ss-5-bg {
+                position: relative;
+                width: 100%;
+                background: url(/assets/image/bg-s5-fayette.png) no-repeat center/cover;
+            }
+        </style>
+        <section class="ss-5-bg py-10 lg:py-[120px]">
+            <div class="container flex flex-col gap-10 lg:gap-16">
+                <div class="flex flex-col gap-4 items-center justify-center">
+                    <h2 class="text-heading-h3 text-neutralc-50">
+                        What to expect
+                    </h2>
+                    <p class="text-body-md-regular text-neutralc-50 text-center">
+                        A tour is a great way for you to get to know us and for us to get to know you!
+                    </p>
+                    <a href="#" class="button">Learn more</a>
+                </div>
 
+
+                <style>
+                    .wte-navigation .swiper-pagination-bullet {
+                        width: 67px;
+                        height: 4px;
+                        border-radius: 16px;
+                        background: #FFF;
+                        opacity: 1;
+                    }
+
+                    .wte-navigation .swiper-pagination-bullet-active {
+                        background: #2955D9;
+                    }
+                </style>
+                <!-- Slider main container -->
+                <div id="what-to-expect" class="pb-12 swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <!-- single you will learn -->
+                            <div class="you-learn">
+                                <figure class="img w-[72px] h-[72px]"><img src="/assets/image/you-learn.svg" alt="icon">
+                                </figure>
+                                <p class="text-body-lg-regular text-neutralc-800 text-center">Haircutting, coloring,
+                                    perming, and
+                                    styling 1</p>
+                            </div>
+                        </div>
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <!-- single you will learn -->
+                            <div class="you-learn">
+                                <figure class="img w-[72px] h-[72px]"><img src="/assets/image/you-learn.svg" alt="icon">
+                                </figure>
+                                <p class="text-body-lg-regular text-neutralc-800 text-center">Haircutting, coloring,
+                                    perming, and
+                                    styling 2</p>
+                            </div>
+                        </div>
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <!-- single you will learn -->
+                            <div class="you-learn">
+                                <figure class="img w-[72px] h-[72px]"><img src="/assets/image/you-learn.svg" alt="icon">
+                                </figure>
+                                <p class="text-body-lg-regular text-neutralc-800 text-center">Haircutting, coloring,
+                                    perming, and
+                                    styling 3</p>
+                            </div>
+                        </div>
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <!-- single you will learn -->
+                            <div class="you-learn">
+                                <figure class="img w-[72px] h-[72px]"><img src="/assets/image/you-learn.svg" alt="icon">
+                                </figure>
+                                <p class="text-body-lg-regular text-neutralc-800 text-center">Haircutting, coloring,
+                                    perming, and
+                                    styling 4</p>
+                            </div>
+                        </div>
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <!-- single you will learn -->
+                            <div class="you-learn">
+                                <figure class="img w-[72px] h-[72px]"><img src="/assets/image/you-learn.svg" alt="icon">
+                                </figure>
+                                <p class="text-body-lg-regular text-neutralc-800 text-center">Haircutting, coloring,
+                                    perming, and
+                                    styling 5</p>
+                            </div>
+                        </div>
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <!-- single you will learn -->
+                            <div class="you-learn">
+                                <figure class="img w-[72px] h-[72px]"><img src="/assets/image/you-learn.svg" alt="icon">
+                                </figure>
+                                <p class="text-body-lg-regular text-neutralc-800 text-center">Haircutting, coloring,
+                                    perming, and
+                                    styling 6</p>
+                            </div>
+                        </div>
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <!-- single you will learn -->
+                            <div class="you-learn">
+                                <figure class="img w-[72px] h-[72px]"><img src="/assets/image/you-learn.svg" alt="icon">
+                                </figure>
+                                <p class="text-body-lg-regular text-neutralc-800 text-center">Haircutting, coloring,
+                                    perming, and
+                                    styling 7</p>
+                            </div>
+                        </div>
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <!-- single you will learn -->
+                            <div class="you-learn">
+                                <figure class="img w-[72px] h-[72px]"><img src="/assets/image/you-learn.svg" alt="icon">
+                                </figure>
+                                <p class="text-body-lg-regular text-neutralc-800 text-center">Haircutting, coloring,
+                                    perming, and
+                                    styling 8</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination wte-navigation"></div>
+                </div>
+            </div>
+        </section>
         <!-- -------------------- section 6 -------------------- -->
+        <style>
+            .ss-6-bg {
+                position: relative;
+                width: 100%;
+                background: url(/assets/image/bg-s6-fayette.png) no-repeat center/cover;
+            }
 
+            .map {
+                position: relative;
+                width: 100%;
+                padding-top: calc(436 / 1280 * 100%);
+                /* Đảm bảo tỷ lệ */
+            }
+
+            .map iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: 1px solid rgba(0, 0, 0, 0.13);
+            }
+        </style>
+        <section class="ss-6-bg py-10 lg:py-[120px]">
+            <div class="container">
+                <div class="flex flex-col gap-10 lg:gap-[100px]">
+                    <!-- information -->
+                    <div class="">
+                        <div class="flex flex-col sm:flex-row gap-10 items-start justify-between">
+                            <h2 class="text-heading-h3 text-neutralc-950">Information</h2>
+                            <a href="#" class="button">Schedule a Tour</a>
+                        </div>
+                        <div class="mt-10 lg:mt-[60px] grid grid-cols-1 lg:grid-cols-2 gap-6">
+                            <div class="flex flex-col gap-8 lg:max-w-[511px]">
+                                <!-- single row -->
+                                <div class="flex flex-col sm:flex-row items-start gap-6">
+                                    <!-- left -->
+                                    <div class="sm:w-[38%] flex items-center gap-4">
+                                        <figure class="w-6 h-6"><img src="/assets/image/icon/location.svg" alt="icon">
+                                        </figure>
+                                        <p class="text-body-md-bold text-neutralc-900">Visit Us</p>
+                                    </div>
+                                    <!-- info container -->
+                                    <div class="sm:w-[57%] flex flex-col gap-3">
+                                        <!-- single-info -->
+                                        <div class="flex flex-col gap-1">
+                                            <p class="text-body-md-bold text-neutralc-900"></p>
+                                            <p class="text-body-md-regular text-neutralc-700">
+                                                <a href="#" class="inline-block hover:text-secondary">
+                                                    1000 Phoenix Ave, Fort Smith, AR 72901
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- single row -->
+                                <div class="flex flex-col sm:flex-row items-start gap-6">
+                                    <!-- left -->
+                                    <div class="sm:w-[38%] flex items-center gap-4">
+                                        <figure class="w-6 h-6"><img src="/assets/image/icon/phone.svg" alt="icon">
+                                        </figure>
+                                        <p class="text-body-md-bold text-neutralc-900">Call or Text Us</p>
+                                    </div>
+                                    <!-- info container -->
+                                    <div class="sm:w-[57%] flex flex-col gap-3">
+                                        <!-- single-info -->
+                                        <div class="flex flex-col gap-1">
+                                            <p class="text-body-md-bold text-neutralc-900">Services</p>
+                                            <p class="text-body-md-regular text-neutralc-700">
+                                                <a href="#" class="inline-block hover:text-secondary">
+                                                    479-222-6225
+                                                </a>
+                                                Voice & Text
+                                            </p>
+                                        </div>
+                                        <!-- single-info -->
+                                        <div class="flex flex-col gap-1">
+                                            <p class="text-body-md-bold text-neutralc-900">Admissions</p>
+                                            <p class="text-body-md-regular text-neutralc-700">
+                                                <a href="#" class="inline-block hover:text-secondary">
+                                                    855-375-4247
+                                                </a>
+                                                Voice
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- single row -->
+                                <div class="flex flex-col sm:flex-row items-start gap-6">
+                                    <!-- left -->
+                                    <div class="sm:w-[38%] flex items-center gap-4">
+                                        <figure class="w-6 h-6"><img src="/assets/image/icon/card-id.svg" alt="icon">
+                                        </figure>
+                                        <p class="text-body-md-bold text-neutralc-900">Programs Offered</p>
+                                    </div>
+                                    <!-- info container -->
+                                    <div class="sm:w-[57%] flex flex-col gap-3">
+                                        <!-- single-info -->
+                                        <div class="flex flex-col gap-1">
+                                            <p class="text-body-md-bold text-neutralc-900"></p>
+                                            <p class="text-body-md-regular text-neutralc-700">
+                                                Cosmetology
+                                                <a href="#" class="inline-block hover:text-secondary">
+                                                </a>
+                                            </p>
+                                        </div>
+                                        <!-- single-info -->
+                                        <div class="flex flex-col gap-1">
+                                            <p class="text-body-md-bold text-neutralc-900"></p>
+                                            <p class="text-body-md-regular text-neutralc-700">
+                                                Aesthetics
+                                                <a href="#" class="inline-block hover:text-secondary">
+                                                </a>
+                                            </p>
+                                        </div>
+                                        <!-- single-info -->
+                                        <div class="flex flex-col gap-1">
+                                            <p class="text-body-md-bold text-neutralc-900"></p>
+                                            <p class="text-body-md-regular text-neutralc-700">
+                                                Manicure
+                                                <a href="#" class="inline-block hover:text-secondary">
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- single row -->
+                                <div class="flex flex-col sm:flex-row items-start gap-6">
+                                    <!-- left -->
+                                    <div class="sm:w-[38%] flex items-center gap-4">
+                                        <figure class="w-6 h-6"><img src="/assets/image/icon/hand-watch.svg" alt="icon">
+                                        </figure>
+                                        <p class="text-body-md-bold text-neutralc-900">Hours</p>
+                                    </div>
+                                    <!-- info container -->
+                                    <div class="sm:w-[57%] flex flex-col gap-3">
+                                        <!-- single-info -->
+                                        <div class="flex flex-col gap-1">
+                                            <p class="text-body-md-bold text-neutralc-900">Services</p>
+                                            <p class="text-body-md-regular text-neutralc-700">
+                                                Tues – Fri 8:30 am - 3:30 pm
+                                                <a href="#" class="inline-block hover:text-secondary">
+                                                </a>
+                                            </p>
+                                        </div>
+                                        <!-- single-info -->
+                                        <div class="flex flex-col gap-1">
+                                            <p class="text-body-md-bold text-neutralc-900">Student Schedule</p>
+                                            <p class="text-body-md-regular text-neutralc-700">
+                                                Mon – Fri 8:30 am - 4:30 pm
+                                                <a href="#" class="inline-block hover:text-secondary">
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- image info -->
+                            <figure class="ml-auto rounded-2xl overflow-hidden lg:max-w-[543px]"><img class="min-w-full"
+                                    src="/assets/image/figure-s2-cosmetology.png" alt=""></figure>
+                        </div>
+
+                        <!-- iframe map -->
+                        <div class="mt-10 lg:mt-[72px] map w-full min-h-[360px] 2xl:min-h-[436px] overflow-hidden">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.9402630589!2d-84.2596933!3d33.916937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5a7452c006df3%3A0x7924291ec95629ff!2sAtlanta%20Beauty%20%26%20Barber%20Academy!5e0!3m2!1svi!2s!4v1741254138578!5m2!1svi!2s"
+                                style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+
+                    <!-- find our location -->
+                    <div class="">
+                        <h2 class="text-heading-h3 text-neutralc-950">Find our locations</h2>
+                        <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-6">
+                            <!-- single location -->
+                            <div class="our-location">
+                                <figure class="w-full h-full"><img class=" min-w-full min-h-[269px]"
+                                        src="/assets/image/our-service.png" alt="image">
+                                </figure>
+                                <div class="context">
+                                    <p class="text-body-lg-bold text-white">Fayetteville Campus</p>
+                                    <a href="#" class="sub-button">
+                                        <figure><img src="/assets/image/icon/arrow-right-up-circle.svg" alt="icon">
+                                        </figure>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- single location -->
+                            <div class="our-location">
+                                <figure class="w-full h-full"><img class=" min-w-full min-h-[269px]"
+                                        src="/assets/image/our-service.png" alt="image">
+                                </figure>
+                                <div class="context">
+                                    <p class="text-body-lg-bold text-white">Fayetteville Campus</p>
+                                    <a href="#" class="sub-button">
+                                        <figure><img src="/assets/image/icon/arrow-right-up-circle.svg" alt="icon">
+                                        </figure>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- single location -->
+                            <div class="our-location">
+                                <figure class="w-full h-full"><img class=" min-w-full min-h-[269px]"
+                                        src="/assets/image/our-service.png" alt="image">
+                                </figure>
+                                <div class="context">
+                                    <p class="text-body-lg-bold text-white">Fayetteville Campus</p>
+                                    <a href="#" class="sub-button">
+                                        <figure><img src="/assets/image/icon/arrow-right-up-circle.svg" alt="icon">
+                                        </figure>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- single location -->
+                            <div class="our-location">
+                                <figure class="w-full h-full"><img class=" min-w-full min-h-[269px]"
+                                        src="/assets/image/our-service.png" alt="image">
+                                </figure>
+                                <div class="context">
+                                    <p class="text-body-lg-bold text-white">Fayetteville Campus</p>
+                                    <a href="#" class="sub-button">
+                                        <figure><img src="/assets/image/icon/arrow-right-up-circle.svg" alt="icon">
+                                        </figure>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- single location -->
+                            <div class="our-location">
+                                <figure class="w-full h-full"><img class=" min-w-full min-h-[269px]"
+                                        src="/assets/image/our-service.png" alt="image">
+                                </figure>
+                                <div class="context">
+                                    <p class="text-body-lg-bold text-white">Fayetteville Campus</p>
+                                    <a href="#" class="sub-button">
+                                        <figure><img src="/assets/image/icon/arrow-right-up-circle.svg" alt="icon">
+                                        </figure>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- -------------------- section 7 -------------------- -->
 
 
@@ -741,6 +1120,41 @@
     <script defer src="/assets/js/accordion.js"></script>
 
 
+    <script>
+        const swiper = new Swiper('#what-to-expect', {
+            slidesPerView: 1,
+            spaceBetween: 24,
+            loop: true,
+            // speed: 10000,
+            slidesPerGroup: 4, // Chuyển 2 slide mỗi lần
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                768: { slidesPerView: 2 },
+                992: { slidesPerView: 3 },
+                1440: { slidesPerView: 4 },
+                2560: { slidesPerView: 4 }
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+            // on: {
+            //     autoplayTimeLeft(s) {
+            //         s.slidePrev(); // Đảo hướng autoplay thay vì `reverseDirection`
+            //     }
+            // }
+        });
+    </script>
 
     <!-- career opportunities js -->
     <script>
