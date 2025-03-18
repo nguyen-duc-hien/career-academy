@@ -1792,6 +1792,10 @@ hr {
     &.bg-50 {
       background: var(--neutral-50);
     }
+    &.bg-contact {
+      color: #999;
+      background: transparent;
+    }
 
     .row-icon {
       display: none;

@@ -1926,6 +1926,10 @@ hr.footer-divider {
 .career-opportunities-row.bg-50 {
   background: var(--neutral-50);
 }
+.career-opportunities-row.bg-contact {
+  color: #999;
+  background: transparent;
+}
 .career-opportunities-row .row-icon {
   display: none;
 }
